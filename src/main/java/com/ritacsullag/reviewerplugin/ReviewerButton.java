@@ -21,7 +21,7 @@ public class ReviewerButton extends AnAction {
         reviewerSelector.showAndGet();
 
         List<String> modifiedReviewers = reviewerSelector.getAllReviewers();
-        if (!modifiedReviewers.equals(reviewers)) {
+        if (!modifiedReviewers.equals(reviewers) && reviewerSelector.getExitCode() != DialogWrapper.CANCEL_EXIT_CODE) {
             ReviewerList.saveReviewers(modifiedReviewers);
         }
 
