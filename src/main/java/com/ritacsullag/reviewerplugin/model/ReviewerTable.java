@@ -8,9 +8,13 @@ public class ReviewerTable extends AbstractTableModel {
     private List<ReviewerTableRowData> reviewersForTable;
 
     public ReviewerTable(List<String> reviewers) {
-        this.reviewersForTable = reviewers.stream()
-                .map(reviewer -> new ReviewerTableRowData(false, reviewer))
-                .collect(Collectors.toList());
+        if(reviewers.isEmpty()){
+            this.reviewersForTable = List.of(new ReviewerTableRowData(false, "Reviewer Example<Reviewer@email.address>"));
+        } else {
+            this.reviewersForTable = reviewers.stream()
+                    .map(reviewer -> new ReviewerTableRowData(false, reviewer))
+                    .collect(Collectors.toList());
+        }
     }
 
     @Override
