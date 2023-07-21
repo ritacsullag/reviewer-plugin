@@ -36,6 +36,7 @@ public class ReviewerSelector extends DialogWrapper {
 
         JPanel actionPanel = new JPanel();
         ActionToolbar actionToolbar = createActionBar(table);
+        actionToolbar.setTargetComponent(actionPanel);
         actionPanel.add(actionToolbar.getComponent());
         mainDiaglog.add(actionPanel, BorderLayout.AFTER_LAST_LINE);
 
