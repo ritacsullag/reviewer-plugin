@@ -1,8 +1,13 @@
 package com.ritacsullag.reviewerplugin.model;
 
 import com.intellij.openapi.diagnostic.Logger;
+import com.intellij.openapi.ui.MessageType;
+import com.intellij.openapi.ui.popup.ComponentPopupBuilder;
+import com.intellij.openapi.ui.popup.JBPopupFactory;
 import org.jetbrains.annotations.NotNull;
 
+import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -34,6 +39,21 @@ public class ReviewerList {
             Files.write(getPathForReviewerList(), reviewers);
         } catch (IOException e) {
             logger.error(e);
+            createErrorMessagePopUp();
         }
+    }
+
+    private static void createErrorMessagePopUp() {
+        String message = "Something went wrong, we could not save the new Reviewer. Please try it again!";
+        JPanel panel = new JPanel();
+        panel.setBackground(MessageType.ERROR.getPopupBackground());
+        panel.add(new JLabel(message), BorderLayout.WEST);
+        panel.add(new JLabel(MessageType.ERROR.getDefaultIcon()), BorderLayout.EAST);
+
+        ComponentPopupBuilder builder = JBPopupFactory.getInstance().createComponentPopupBuilder(panel, null)
+                .setCancelOnClickOutside(true)
+                .setCancelKeyEnabled(true)
+                .setRequestFocus(true);
+        builder.createPopup().showInFocusCenter();
     }
 }
