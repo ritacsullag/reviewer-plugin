@@ -30,7 +30,8 @@
     <actions>
         <action id="com.ritacsullag.reviewerplugin.ButtonAction" class="com.ritacsullag.reviewerplugin.ReviewerButton"
                 text="Reviewer: "
-                description="A review from the mentioned reviewer is required">
+                description="A review from the mentioned reviewer is required"
+                icon="AllIcons.Debugger.AddToWatch">
             <add-to-group group-id="Vcs.MessageActionGroup" anchor="last"/>
         </action>
     </actions>
