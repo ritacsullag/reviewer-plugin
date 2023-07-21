@@ -15,7 +15,7 @@ import java.util.List;
 
 public class ReviewerSelector extends DialogWrapper {
 
-    ReviewerTable reviewerTable;
+    private ReviewerTable reviewerTable;
 
     public ReviewerSelector(boolean canBeParent, List<String> reviewers) {
         super(canBeParent);

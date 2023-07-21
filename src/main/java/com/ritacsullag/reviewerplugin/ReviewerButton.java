@@ -2,7 +2,6 @@ package com.ritacsullag.reviewerplugin;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
-import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.ui.DialogWrapper;
 import com.intellij.openapi.vcs.CheckinProjectPanel;
 import com.intellij.openapi.vcs.ui.Refreshable;
@@ -13,7 +12,6 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public class ReviewerButton extends AnAction {
-    private static final Logger logger = Logger.getInstance(ReviewerButton.class);
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent event) {
@@ -29,9 +27,7 @@ public class ReviewerButton extends AnAction {
 
         if (reviewerSelector.getExitCode() == DialogWrapper.OK_EXIT_CODE) {
             CheckinProjectPanel data = (CheckinProjectPanel) Refreshable.PANEL_KEY.getData(event.getDataContext());
-            if (data != null) {
-                updateCommitMessage(data, reviewerSelector.getSelectedReviewers());
-            }
+            updateCommitMessage(data, reviewerSelector.getSelectedReviewers());
         }
     }
 

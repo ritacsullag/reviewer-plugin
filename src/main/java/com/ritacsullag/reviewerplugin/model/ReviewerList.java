@@ -13,9 +13,6 @@ public class ReviewerList {
     private static final Logger logger = Logger.getInstance(ReviewerList.class);
     public static final String USERHOME = System.getProperty("user.home");
 
-    ReviewerList() {
-    }
-
     public static List<String> getReviewers() {
 
         try {
