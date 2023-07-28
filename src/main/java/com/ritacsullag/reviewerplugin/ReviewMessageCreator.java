@@ -20,7 +20,7 @@ public class ReviewMessageCreator {
         return newMessage.trim();
     }
 
-    private static String getReviewerUsername(String reviewer){
+    private static String getReviewerUsername(String reviewer) {
         int index = reviewer.indexOf("<");
         return reviewer.substring(0, index).trim();
     }

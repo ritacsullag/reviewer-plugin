@@ -1,29 +1,22 @@
-<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
     <id>com.ritacsullag.reviewer-plugin</id>
-
-    <!-- Public plugin name should be written in Title Case.
-         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
-    <name>Reviewer-plugin</name>
-
-    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor email="csullagrita@gmail.com" url="https://www.yourcompany.com"></vendor>
-
-    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
-         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
-         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <name>Reviewer</name>
+    <vendor email="csullagrita@gmail.com" url="https://github.com/ritacsullag">Eszter Rita Csullag</vendor>
+    <version>1.00</version>
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
+    <p>This plugin was created to choose easily reviewer for your git commit.<p>
+
+    <p>Reviewer plugin can work with <a href="https://github.com/hawser86/co-author-plugin">Co-Author plugin's</a> co-author list, in case of the following reviewer format:<p>
+
+    <p><i>username	&lt;example@address.com&gt;</i> <p>
+
+     <p><img src="https://github.com/ritacsullag/reviewer-plugin/blob/main/src/main/resources/images/message_example.png?raw=true"></p>
   ]]></description>
 
-    <!-- Product and plugin compatibility requirements.
-         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.vcs</depends>
     <depends>com.intellij.modules.platform</depends>
 
-    <!-- Extension points defined by the plugin.
-         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
 
     </extensions>

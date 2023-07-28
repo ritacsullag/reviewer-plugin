@@ -15,8 +15,6 @@ repositories {
 intellij {
   version.set("2022.2.4")
   type.set("IC") // Target IDE Platform
-
-  plugins.set(listOf(/* Plugin Dependencies */))
 }
 
 tasks {
