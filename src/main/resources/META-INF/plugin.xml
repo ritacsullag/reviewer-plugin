@@ -8,9 +8,12 @@
 
     <p>Reviewer plugin can work with <a href="https://github.com/hawser86/co-author-plugin">Co-Author plugin's</a> co-author list, in case of the following reviewer format:<p>
 
-    <p><i>username	&lt;example@address.com&gt;</i> <p>
+    <p><i>username	&lt;example@address.com&gt;</i><p>
 
-     <p><img src="https://github.com/ritacsullag/reviewer-plugin/blob/main/src/main/resources/images/message_example.png?raw=true"></p>
+    <p><img src="https://github.com/ritacsullag/reviewer-plugin/blob/main/src/main/resources/images/message_example.png?raw=true"></p>
+
+    <p>This project was mentored by <a href="https://github.com/VPecc">VPecc</a>.<p>
+
   ]]></description>
 
     <depends>com.intellij.modules.lang</depends>

@@ -23,4 +23,4 @@ The plugin will create the following mention:
 
 ![message_example.png](src/main/resources/images/message_example.png)
 
-This project was mentored by @VPecc
+This project was mentored by [VPecc](https://github.com/VPecc).
