@@ -2,7 +2,7 @@
     <id>com.ritacsullag.reviewer-plugin</id>
     <name>Reviewer</name>
     <vendor email="csullagrita@gmail.com" url="https://github.com/ritacsullag">Eszter Rita Csullag</vendor>
-    <version>1.00</version>
+    <version>1.1</version>
     <description><![CDATA[
     <p>This plugin was created to choose easily reviewer for your git commit.<p>
 
@@ -14,7 +14,14 @@
 
     <p>This project was mentored by <a href="https://github.com/VPecc">VPecc</a>.<p>
 
-  ]]></description>
+    ]]></description>
+    <change-notes><![CDATA[
+        <p>1.1</p>
+        <ul>
+            <li>Fix plugin compatibility issue with IDE 2023.3+</li>
+        </ul>
+
+    ]]></change-notes>
 
     <depends>com.intellij.modules.lang</depends>
     <depends>com.intellij.modules.vcs</depends>
